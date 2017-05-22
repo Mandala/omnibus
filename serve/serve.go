@@ -24,9 +24,6 @@ var ErrServerStopped = errors.New("omnibus-server: Already stopped")
 // Store global handle state
 var global *Server
 
-/*// Template for default not found handler
-var tmplNotFound *template.Template*/
-
 // Options store server related configurations
 type Options struct {
 	Address         string
@@ -142,12 +139,6 @@ func (h *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("404 Not Found"))
 }
 
-/*// notFoundHandler acts as default not found page for the router
-func notFoundHandler(w http.ResponseWriter, r *http.Request) {
-	w.WriteHeader(404)
-	tmplNotFound.Execute(w, r.URL.Path)
-}*/
-
 // NewServer create new empty server object
 func NewServer() *Server {
 	return &Server{}
@@ -156,31 +147,6 @@ func NewServer() *Server {
 func init() {
 	// Set global with new server handle
 	global = NewServer()
-	// Initialize not found template
-	/*tmplNotFound = template.Must(template.New("").Parse(`<!DOCTYPE html>
-	<html lang="en">
-	<head>
-	  <title>Not Found</title>
-	  <meta charset="UTF-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <style>
-	  body {
-	    font-family: Georgia, serif;
-	  }
-	  .resource {
-	    font-family: "Lucida Console", Monaco, monospace;
-	  }
-	  </style>
-	</head>
-	<body>
-	  <h1>Page Not Found</h1>
-	  <p>
-	    Resource <span class="resource">{{.}}</span> was not found on the server.
-	    Please double check the entered URL and try again.
-	  </p>
-	</body>
-	</html>
-	`))*/
 }
 
 // WithOptions set global configurations

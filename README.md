@@ -18,7 +18,7 @@ Then, just use `import` statement in your code to use the omnibus subpackages.
 
 ```go
 import (
-    "github.com/mandala/omnibus/server"
+    "github.com/mandala/omnibus/serve"
     "github.com/mandala/omnibus/browser"
     "github.com/mandala/omnibus/view"
 )
