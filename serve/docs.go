@@ -8,4 +8,4 @@ embedded Gorilla Mux router, graceful shutdown, and request body limiter.
 */
 package serve
 
-// This code is intentionally left blank for Godoc documentation.
+// This file is intentionally left blank for Godoc documentation.
