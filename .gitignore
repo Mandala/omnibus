@@ -1,0 +1,21 @@
+# Copyright (c) 2017 Fadhli Dzil Ikram. All rights reserved.
+# This source code is brought to you under MIT license that can be found
+# on the LICENSE file.
+
+# This gitignore prevents the pseudo-test file being uploaded to repository.
+# TODO: Write correct testbench instead of pseudo-testing with main package.
+
+# Ignore build files
+omnibus
+omnibus.exe
+
+# Ignore delve build debug files
+debug
+debug.exe
+
+# Ignore all .go files in root
+/*.go
+/*.go.old
+
+# Ignore vscode cofigurations
+.vscode/launch.json

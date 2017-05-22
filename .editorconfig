@@ -1,0 +1,19 @@
+# Copyright (c) 2017 Fadhli Dzil Ikram. All rights reserved.
+# This source code is brought to you under MIT license that can be found
+# on the LICENSE file.
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.go]
+indent_size = 4
+indent_style = tab
+
+[*.md]
+indent_size = 4
+indent_style = space
