@@ -9,14 +9,5 @@
 omnibus
 omnibus.exe
 
-# Ignore delve build debug files
-debug
-debug.exe
-
-# Ignore all .go files in root
-/*.go
-/*.go.old
-!/docs.go
-
 # Ignore vscode cofigurations
 .vscode/launch.json
