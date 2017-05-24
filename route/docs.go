@@ -3,7 +3,7 @@
 // on the LICENSE file.
 
 /*
-Package route wraps gorilla/mux HTTP request multiplexer package. It adds
+Package route wraps gorilla/mux the HTTP request multiplexer package. It adds
 some nifty features such as middleware handling, subrouter with function
 closures with group, and method handler shorthands. This package mostly has
 the same API function syntax but does not directly compatible with library
