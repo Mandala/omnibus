@@ -15,7 +15,7 @@ import (
 )
 
 // ErrRouteNotFound define named route not found on GetURL method
-var ErrRouteNotFound = errors.New("muxer: Named route was not found")
+var ErrRouteNotFound = errors.New("route: Named route was not found")
 
 // Router registers routes to be matched and dispatches a handler.
 type Router struct {

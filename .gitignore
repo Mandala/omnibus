@@ -2,12 +2,10 @@
 # This source code is brought to you under MIT license that can be found
 # on the LICENSE file.
 
-# This gitignore prevents the pseudo-test file being uploaded to repository.
-# TODO: Write correct testbench instead of pseudo-testing with main package.
+# This gitignore prevents the local folder being uploaded to repository.
 
-# Ignore build files
-omnibus
-omnibus.exe
+# Ignore anything inside local folder
+/local/
 
 # Ignore vscode cofigurations
 .vscode/launch.json
