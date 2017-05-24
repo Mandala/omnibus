@@ -2,16 +2,19 @@
 // This source code is brought to you under MIT license that can be found
 // on the LICENSE file.
 
-package muxer
+package route
 
 import (
 	"html/template"
 	"net/http"
 )
 
+// tmplNotFound define default route not found template for NewRouter.
 var tmplNotFound *template.Template
 
+// Utility initialization function
 func init() {
+	// Parse HTML template from string
 	tmplNotFound = template.Must(template.New("").Parse(`<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,8 +41,10 @@ func init() {
 `))
 }
 
-// notFoundHandler acts as default not found page for the router
-func notFoundHandler(w http.ResponseWriter, r *http.Request) {
-	w.WriteHeader(404)
-	tmplNotFound.Execute(w, r.URL.Path)
-}
+// NotFoundHandler acts as default not found page for the router
+var NotFoundHandler = http.HandlerFunc(
+	func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(404)
+		tmplNotFound.Execute(w, r.URL.String())
+	},
+)
